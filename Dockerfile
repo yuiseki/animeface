@@ -17,5 +17,5 @@ ADD src /app
 WORKDIR /app
 RUN cp /animeface-2009/animeface-ruby/AnimeFace.so /app
 
-EXPOSE  4567
-CMD ["ruby", "app.rb"]
+EXPOSE $PORT
+CMD ruby /app/app.rb -p $PORT
